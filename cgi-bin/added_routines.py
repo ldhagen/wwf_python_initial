@@ -16,6 +16,7 @@ def create_cell_dict(word_multipliers, letter__multipliers):
     for x in range(15):
         for y in range(15):
             value_dict = {}
+            value_dict['location'] = (x,y)
             value_dict['current_letter'] = null_current_letter_value
             value_dict['adjacent_dict'] = create_adjacent_dict(x,y)
             value_dict['word_multiplier'] = find_word_multiplier(x,y,word_multipliers)
